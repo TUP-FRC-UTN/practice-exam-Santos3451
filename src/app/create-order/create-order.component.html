@@ -1,0 +1,132 @@
+
+<div class="container mt-5">
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()" >
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" class="form-control" formControlName="customerName"
+            [ngClass]="{
+                'is-invalid': isFieldInvalid('customerName'),
+                'is-valid': isFieldValid('customerName')
+
+            }"  >
+               <div class="invalid-feedback">
+                {{ getCustomerNameError() }}
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Email:</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid': isFieldInvalid('email'),
+                'is-valid': isFieldValid('email')
+              }">
+            <div class="invalid-feedback">
+              {{ getEmailError() }}
+            </div>
+        
+          </div>
+        </div>
+      </div>
+      
+      <div class="card mt-5">
+        <div class="card-header d-flex ">
+          <h5>Productos </h5>
+          <button type="button" class="btn btn-primary ms-auto" (click)="addProduct()">+</button>
+        </div>
+        <div class="card-body">
+          <div formArrayName="products">
+            @for (product of productosArray.controls; track $index) {
+              <div [formGroupName]="$index" class="row mb-3">
+                <div class="col-md-3">
+                  <label class="form-label">Producto</label>
+                  <select 
+                    class="form-control" 
+                    formControlName="productId" 
+                    [ngClass]="{'is-invalid': isDuplicatedProduct(product)}"
+                    (change)="onProductSelect($event, $index)">
+                    <option value="">Seleccione un producto</option>
+                    @for (prod of products; track prod.id) {
+                      <option [value]="prod.id">{{prod.name}}</option>
+                    }
+                  </select>
+                  @if (isDuplicatedProduct(product)) {
+                    <div class="text-danger small mt-1">
+                      El producto ya ha sido seleccionado.
+                    </div>
+                  }
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">Cantidad</label>
+                  <input type="number" class="form-control" formControlName="quantity">
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">Precio</label>
+                  <input type="number" class="form-control" formControlName="price" readonly>
+                </div>
+                <div class="col-md-2">
+                  <label class="form-label">Stock</label>
+                  <input type="number" class="form-control" formControlName="stock" readonly>
+                </div>
+                <div class="col-md-1">
+                  <label class="form-label">&nbsp;</label>
+                  <button type="button" class="btn btn-danger d-block" (click)="removeProduct($index)">X</button>
+                </div>
+              </div>
+            } @empty {
+              <div class="alert alert-info">
+                No hay productos agregados. Click en + para agregar.
+              </div>
+            }
+        </div>
+        </div>
+      </div>
+
+      <div class="card mt-5">
+        <div class="card-header d-flex ">
+          <h5>Productos seleccionados </h5>
+        </div>
+        <div class="card-body">
+          @for (product of productosArray.controls; track $index){
+            <div class="mb-2">
+              {{getProductName(product.get('productId')?.value)}}-
+              Cantidad: {{product.get('quantity')?.value}} -
+              Precio: {{product.get('price')?.value}} -
+              Stock: {{product.get('stock')?.value}}
+
+            </div>
+
+
+          } @empty {
+            <div class="alert alert-info">
+              No hay productos seleccionados.
+            </div>
+          }
+          
+        </div>
+       
+      </div>
+
+        <div class="card mt-5">
+            <div class="card-body col-md-6 mx-auto "> 
+            <H4>Total: ${{getTotal()}}</H4>
+            @if (getTotal() >1000) {
+
+              <small class="text-success"> 10% de descuentp aplicado! </small>
+            }
+            </div>
+
+
+        </div>      
+      <!-- Resto del formulario -->
+       <div class="d-flex mt-2">
+      <button type="submit" class="btn btn-primary ms-auto">Create Order</button>
+      </div>
+    </form>
+  </div>

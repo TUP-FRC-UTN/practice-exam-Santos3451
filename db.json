@@ -1,100 +1,372 @@
 {
-    "products": [
-      {
-        "id": "1",
-        "name": "Laptop Gaming Pro",
-        "price": 999.99,
-        "stock": 50
-      },
-      {
-        "id": "2",
-        "name": "Smartphone X12",
-        "price": 699.99,
-        "stock": 100
-      },
-      {
-        "id": "3",
-        "name": "Tablet Air",
-        "price": 449.99,
-        "stock": 75
-      },
-      {
-        "id": "4",
-        "name": "Smart Watch V4",
-        "price": 199.99,
-        "stock": 120
-      }
-    ],
-    "orders": [
-      {
-        "id": "1586",
-        "customerName": "juan Perez",
-        "email": "juanP@gmail.com",
-        "products": [
-          {
-            "productId": "1",
-            "quantity": 1,
-            "stock": 50,
-            "price": 999.99
-          }
-        ],
-        "total": 999.99,
-        "orderCode": "J.com065049",
-        "timestamp": "2024-10-28T14:51:05.049Z"
-      },
-      {
-        "id": "3db1",
-        "customerName": "juan perez",
-        "email": "juanP@gmail.com",
-        "products": [
-          {
-            "productId": "2",
-            "quantity": 1,
-            "stock": 100,
-            "price": 699.99
-          }
-        ],
-        "total": 699.99,
-        "orderCode": "J.com079946",
-        "timestamp": "2024-10-28T14:51:19.946Z"
-      },
-      {
-        "id": "3b59",
-        "customerName": "juan perez",
-        "email": "juanP@gmail.com",
-        "products": [
-          {
-            "productId": "2",
-            "quantity": 1,
-            "stock": 100,
-            "price": 699.99
-          }
-        ],
-        "total": 699.99,
-        "orderCode": "J.com097957",
-        "timestamp": "2024-10-28T14:51:37.957Z"
-      },
-      {
-        "id": "0f2c",
-        "customerName": "Luis Gigena",
-        "email": "luisG@gmail.com",
-        "products": [
-          {
-            "productId": "1",
-            "quantity": 1,
-            "stock": 50,
-            "price": 999.99
-          },
-          {
-            "productId": "2",
-            "quantity": 1,
-            "stock": 100,
-            "price": 699.99
-          }
-        ],
-        "total": 1529.982,
-        "orderCode": "L.com222249",
-        "timestamp": "2024-10-28T14:53:42.249Z"
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop Gaming Pro",
+      "price": 999.99,
+      "stock": 50
+    },
+    {
+      "id": "2",
+      "name": "Smartphone X12",
+      "price": 699.99,
+      "stock": 100
+    },
+    {
+      "id": "3",
+      "name": "Tablet Air",
+      "price": 449.99,
+      "stock": 75
+    },
+    {
+      "id": "4",
+      "name": "Smart Watch V4",
+      "price": 199.99,
+      "stock": 120
+    }
+  ],
+  "orders": [
+    {
+      "id": "1586",
+      "customerName": "juan Perez",
+      "email": "juanP@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "stock": 50,
+          "price": 999.99
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "J.com065049",
+      "timestamp": "2024-10-28T14:51:05.049Z"
+    },
+    {
+      "id": "3db1",
+      "customerName": "juan perez",
+      "email": "juanP@gmail.com",
+      "products": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 699.99,
+      "orderCode": "J.com079946",
+      "timestamp": "2024-10-28T14:51:19.946Z"
+    },
+    {
+      "id": "3b59",
+      "customerName": "juan perez",
+      "email": "juanP@gmail.com",
+      "products": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 699.99,
+      "orderCode": "J.com097957",
+      "timestamp": "2024-10-28T14:51:37.957Z"
+    },
+    {
+      "id": "0f2c",
+      "customerName": "Luis Gigena",
+      "email": "luisG@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "stock": 50,
+          "price": 999.99
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 1529.982,
+      "orderCode": "L.com222249",
+      "timestamp": "2024-10-28T14:53:42.249Z"
+    },
+    {
+      "id": "2f6a",
+      "customerName": "santosvirga",
+      "email": "santos@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "price": 699.99,
+          "stock": 100
+        },
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        },
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        },
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 4699.95,
+      "orderCode": "ORD-M30TCFPJ",
+      "timestamp": "2024-11-02T23:47:26.215Z"
+    },
+    {
+      "id": "60e8",
+      "customerName": ";kljgdfkol;1",
+      "email": "asd@akdfa.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 4,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 3999.96,
+      "orderCode": "ORD-M30THU5V",
+      "timestamp": "2024-11-02T23:51:38.227Z"
+    },
+    {
+      "id": "be65",
+      "customerName": "dfsdfds",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        },
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 1999.98,
+      "orderCode": "ORD-M30TV393",
+      "timestamp": "2024-11-03T00:01:56.535Z"
+    },
+    {
+      "id": "b662",
+      "customerName": "mkkk",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        },
+        {
+          "productId": "3",
+          "quantity": 1,
+          "price": 449.99,
+          "stock": 75
+        }
+      ],
+      "total": 1449.98,
+      "orderCode": "ORD-M30U7COC",
+      "timestamp": "2024-11-03T00:11:28.620Z"
+    },
+    {
+      "id": "c454",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 4,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 3599.964,
+      "orderCode": "ORD-1730674191470-74",
+      "timestamp": "2024-11-03T22:49:51.470Z"
+    },
+    {
+      "id": "cf18",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "ORD-1730674246446-78",
+      "timestamp": "2024-11-03T22:50:46.446Z"
+    },
+    {
+      "id": "d8b4",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "ORD-1730674259255-625",
+      "timestamp": "2024-11-03T22:50:59.255Z"
+    },
+    {
+      "id": "e1f7",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "ORD-1730674276096-637",
+      "timestamp": "2024-11-03T22:51:16.096Z"
+    },
+    {
+      "id": "a770",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "",
+          "quantity": 1,
+          "price": 0,
+          "stock": 0
+        }
+      ],
+      "total": 0,
+      "orderCode": "ORD-1730674589217-982",
+      "timestamp": "2024-11-03T22:56:29.217Z"
+    },
+    {
+      "id": "8529",
+      "customerName": "santos",
+      "email": "santos@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "S.com-1730675319250",
+      "timestamp": "2024-11-03T23:08:39.250Z"
+    },
+    {
+      "id": "efb3",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "S.com-1731024176665",
+      "timestamp": "2024-11-08T00:02:56.665Z"
+    },
+    {
+      "id": "69e9",
+      "customerName": "santos",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 3,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 2699.9730000000004,
+      "orderCode": "S.com-1731024198539",
+      "timestamp": "2024-11-08T00:03:18.539Z"
+    },
+    {
+      "id": "2dc9",
+      "customerName": "santols",
+      "email": "santos.virga9@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        }
+      ],
+      "total": 999.99,
+      "orderCode": "S.com-1731024212992",
+      "timestamp": "2024-11-08T00:03:32.992Z"
+    },
+    {
+      "id": "8eda",
+      "customerName": "santos",
+      "email": "santos.virga39@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "price": 999.99,
+          "stock": 50
+        },
+        {
+          "productId": "3",
+          "quantity": 1,
+          "price": 449.99,
+          "stock": 75
+        },
+        {
+          "productId": "2",
+          "quantity": 1,
+          "price": 699.99,
+          "stock": 100
+        }
+      ],
+      "total": 1804.4748,
+      "orderCode": "S.com-1731025634220",
+      "timestamp": "2024-11-08T00:27:14.220Z"
+    }
+  ]
+}
